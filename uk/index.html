@@ -18,16 +18,22 @@
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="#top"><span class="logo-mark">MB</span> Міра Бондар</a>
-      <nav class="main-nav">
-        <a class="nav-link" href="#poslugy">Послуги</a>
-        <a class="nav-link" href="#tsiny">Ціни</a>
-        <a class="nav-link" href="#pro-mene">Про мене</a>
-        <a class="nav-link" href="#kontakty">Контакти</a>
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <a href="#poslugy">Послуги</a>
+        <a href="#tsiny">Ціни</a>
+        <a href="#pro-mene">Про мене</a>
+        <a href="#kontakty">Контакти</a>
+      </nav>
+      <div class="header-right">
         <div class="lang-switch">
           <a href="../index.html" hreflang="de" lang="de">DE</a>
           <span class="active">UA</span>
         </div>
-      </nav>
+        <!-- Burger button: visible only on phones, opens the menu -->
+        <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Відкрити меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -63,12 +69,18 @@
             </g>
             <text x="100" y="124" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#2f6f5e">der · die · das</text>
             <text x="100" y="184" font-family="system-ui, sans-serif" font-size="18" fill="#1f2a37">Ich lerne Deutsch.</text>
+            <g class="float float-a">
             <rect x="20" y="20" width="150" height="56" rx="28" fill="#2f6f5e"/>
             <text x="95" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#fff">Hallo!</text>
+            </g>
+            <g class="float float-b">
             <rect x="240" y="16" width="140" height="56" rx="28" fill="#f2b84b"/>
             <text x="310" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#1f2a37">Привіт!</text>
+            </g>
+            <g class="float float-c">
             <circle cx="330" cy="260" r="34" fill="#f2b84b"/>
             <text x="330" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#1f2a37">B1</text>
+            </g>
           </svg>
         </div>
       </div>
@@ -263,5 +275,6 @@
     </div>
   </footer>
 
+  <script src="../js/main.js" defer></script>
 </body>
 </html>
